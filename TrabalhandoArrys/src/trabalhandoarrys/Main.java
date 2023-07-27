@@ -8,7 +8,6 @@ package trabalhandoarrys;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
 import java.util.Iterator;
-import jdk.nashorn.internal.objects.NativeArray;
 
 /**
  *
@@ -24,8 +23,25 @@ public class Main {
         //media();
 
         //pedirVariasNotas();
+        
         // Utilizando o array list, pegar quantos inteiros que o usuario quiser digitar
         // no final indique qual o menor número, qual o maior número e qual a média dos inteiros
+        //menorMaiorComMedia();
+        
+        
+        // para o array {10, -7, 18, 34, 58, 37}
+        //remover ultimo elemento do arraylist
+        
+        //remover primeiro elemento do arraylist
+        
+        //remover menor número do array
+        
+        //para um trecho de texto digitado, transformar as vogais do texto para o formato l33t
+        
+
+    }
+    
+    public static void menorMaiorComMedia() {
         ArrayList<Integer> numbers = new ArrayList<>();
 
         String resp = "";
@@ -66,7 +82,6 @@ public class Main {
                                                 "O menor número é: "+menor+"\n"+
                                                 "O maior número é: "+maior+"\n"+
                                                 "A média dos números é: "+media);
-
     }
 
     public static void pedirVariasNotas() {
