@@ -1,0 +1,48 @@
+Avaliação Prática
+
+Utilizando IDE: NetBeans
+Criar Projeto: ProvaCRUD
+Criar Classe Principal: provacrud.Main
+
+Tempo: 2h
+
+Entrega: AVA e GitHub
+
+
+Tema: Lógica CRUD em Java
+
+Itens avaliados:
+- uso correto das estruturas condicionais e de repetição.
+- criação apenas de variáveis necessárias.
+- formatação do código seguindo padrão da IDE NetBeans.
+- utilização de API.
+- solução apresentada.
+- validação adequada entre requisitos e solução.
+
+
+Obs.: Funcionalidades extras não serão computadas para nota.
+
+
+REQUISITOS
+- Desenvolva um sistema em Java com persistência de dados em memória, 
+	famoso CRUD.
+- O sistema deve apresentar um menu ao usuário, refletindo a situação 
+	de um estoque do e-commerce da Joana, da loja "JôJoias".
+- No menu deve ser possível adicionar um produto por vez, bem como excluir,
+	consultar e atualizar.
+- Deve ser possível dar entrada de produtos no estoque, aumentando quantidade
+	de produtos disponível.
+- Quando o usuário consultar a lista de produtos da loja, deve aparecer, além 
+	do nome do produto, o valor unitário, quantidade disponível e 
+	quantidade reservada.
+- O usuário pode incluir a reservar de um produto, devendo o sistema 
+	diminuir a quantidade disponível e aumentar a quantidade reservada.
+- O sistema não controla pedidos, mas deve ser possível cancelar uma reserva, 
+	devendo o sistema diminuir a quantidade de reserva e aumentar a 
+	quantidade disponível.
+- Por fim, o usuário pode registrar saída do estoque, devendo o sistema 
+	apenas diminuir a quantidade reservada de produtos. Caso a quantidade 
+	reservada chegar a zero, deve-se diminuir a quantidade de produtos 
+	disponíveis.
+
+OBS.: Utilizar JOptionPane
