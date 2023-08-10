@@ -34,6 +34,7 @@ public class Product {
 
         if (this.qReserved < 0) {
             this.quantity += this.qReserved;
+            this.qReserved = 0;
         }
 
         if (this.qReserved == 0) {
