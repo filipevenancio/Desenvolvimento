@@ -59,3 +59,50 @@ values
 	('bbf77761-914e-4322-ab1e-22c5ef220245', true, 'cardápio para manhã', 'jantar', 1);
 
 select * from cardapio c left join turno t on c.turno = t.id;
+
+create table metodo_pgt(
+    id integer not null primary key,
+    descricao varchar not null
+);
+
+insert into metodo_pgt values 
+(1, 'PIX'), 
+(2, 'CREDITO'),
+(3, 'DEBITO');
+
+create table endereco(
+	id uuid not null primary key,
+	logradouro varchar,
+	numero integer,
+	bairro varchar,
+	cidade varchar
+);
+
+alter table endereco add 
+	constraint unique_endereco
+	unique (logradouro, numero, bairro, cidade);
+	
+create table cliente(
+	id uuid not null primary key,
+	nome varchar,
+	telefone varchar not null unique
+);
+
+create table rl_cliente_endereco(
+	id_cliente uuid not null references cliente(id),
+	id_endereco uuid not null references endereco(id)
+);
+
+create table pedido_delivery(
+	numero_pedido seriaL primary key,
+	total decimal not null,
+	id_metodopgt integer not null references metodo_pgt(id),
+	id_cliente uuid not null references cliente(id)
+);
+
+create table rl_pedido_delivery_comida_bebida(
+	id_pedido integer not null references pedido_delivery(numero_pedido),
+	id_comida uuid references comida(id),
+	id_bebida uuid references bebida(id),
+	qt_produto integer not null
+);
